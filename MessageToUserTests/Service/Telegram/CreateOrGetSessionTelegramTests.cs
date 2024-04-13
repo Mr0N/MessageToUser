@@ -18,6 +18,8 @@ namespace MessageToUser.Service.Telegram.Tests
             ConfigurationBuilder builder = new();
             builder.AddUserSecrets(Assembly.GetExecutingAssembly());
             var res = builder.Properties;
+            new CreateOrGetSessionTelegram(builder.Build())
+                .CreateOrGet();
         }
     }
 }
