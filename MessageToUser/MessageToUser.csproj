@@ -5,9 +5,11 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>89d0305e-5c08-414c-9855-51f736f69190</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="Telegram.Bot" Version="19.0.0" />
     <PackageReference Include="TLSharp" Version="0.1.0.574" />
   </ItemGroup>
