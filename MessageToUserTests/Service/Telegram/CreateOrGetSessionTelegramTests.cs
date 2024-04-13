@@ -21,5 +21,6 @@ namespace MessageToUser.Service.Telegram.Tests
             using var client = new CreateOrGetSessionTelegram(builder.Build())
                 .CreateOrGet();
         }
+       
     }
 }
