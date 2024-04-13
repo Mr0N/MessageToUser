@@ -12,7 +12,7 @@ namespace MessageToUser.Service.Telegram
             string apiHash = config.GetSection("apiHash").Value;
             if (apiHash is null || apiId is null)
                 throw new Exception("api ID or api Hash is null");
-            if (int.TryParse(apiId, out var id))
+            if (!int.TryParse(apiId, out var id))
                 throw new Exception("api id is not integer");
             var client = new TelegramClient(id, apiHash);
             client.ConnectAsync(true);
@@ -22,7 +22,7 @@ namespace MessageToUser.Service.Telegram
                     return client;
                 Thread.Sleep(1000);
             }
-            throw new Exception("Connect to teleram is not good")
+            throw new Exception("Connect to teleram is not good");
         }
     }
 }
